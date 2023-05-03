@@ -1,3 +1,4 @@
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +9,14 @@ public class Main {
     }
 
     public void run(Scanner scanner) {
-        // napisz swój program tutaj. Do wczytywania danych użyj przekazanego w parametrze scannera
+        List<Integer> numbers = ListUtils.getNumbers(scanner);
+        if (numbers.size() != 0) {
+            ListUtils.printNumbersInReverse(numbers);
+            ListUtils.printSumOfNumbersCalculation(numbers);
+            int lowest = ListUtils.getLowestNumber(numbers);
+            int greatest = ListUtils.getGreatestNumber(numbers);
+            System.out.println("Najmniejsza liczba w liście to " + lowest);
+            System.out.println("Największa liczba w liście to " + greatest);
+        }
     }
 }
