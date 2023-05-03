@@ -10,15 +10,13 @@ public class Main {
 
     public void run(Scanner scanner) {
         List<Integer> numbers = ListUtils.getNumbers(scanner);
-        try {
+        if (numbers.size() != 0) {
             ListUtils.printNumbersInReverse(numbers);
             ListUtils.printSumOfNumbersCalculation(numbers);
             int lowest = ListUtils.getLowestNumber(numbers);
             int greatest = ListUtils.getGreatestNumber(numbers);
             System.out.println("Najmniejsza liczba w liście to " + lowest);
             System.out.println("Największa liczba w liście to " + greatest);
-        } catch (IllegalArgumentException e) {
-            System.err.println(e.getMessage());
         }
     }
 }

@@ -25,7 +25,6 @@ class ListUtils {
     }
 
     public static void printNumbersInReverse(List<Integer> numbers) {
-        checkIfListSizeIsValid(numbers);
         for (int i = 0; i < numbers.size(); i++) {
             System.out.print(numbers.get(numbers.size() - i - 1));
             if (i != numbers.size() - 1) {
@@ -36,7 +35,6 @@ class ListUtils {
     }
 
     public static void printSumOfNumbersCalculation(List<Integer> numbers) {
-        checkIfListSizeIsValid(numbers);
         for (int i = 0; i < numbers.size(); i++) {
             System.out.print(numbers.get(i));
             if (i != numbers.size() - 1) {
@@ -47,7 +45,6 @@ class ListUtils {
     }
 
     public static int getLowestNumber(List<Integer> numbers) {
-        checkIfListSizeIsValid(numbers);
         int lowest = Integer.MAX_VALUE;
 
         for (Integer number : numbers) {
@@ -58,7 +55,6 @@ class ListUtils {
     }
 
     public static int getGreatestNumber(List<Integer> numbers) {
-        checkIfListSizeIsValid(numbers);
         int greatest = Integer.MIN_VALUE;
 
         for (Integer number : numbers) {
@@ -66,11 +62,5 @@ class ListUtils {
         }
 
         return greatest;
-    }
-
-    private static void checkIfListSizeIsValid(List<Integer> numbers) {
-        if (numbers.size() == 0) {
-            throw new IllegalArgumentException("Podano pustą listę");
-        }
     }
 }
